@@ -1,0 +1,133 @@
+<nav class="flex justify-between items-center p-6 bg-black/30 backdrop-blur-md">
+  <h1 class="text-xl font-bold text-purple-400">Sushant</h1>
+
+  <ul class="flex gap-6 text-gray-300">
+    <li><a href="index.html" class="hover:text-white">Home</a></li>
+    <li><a href="about.html" class="hover:text-white">About</a></li>
+    <li><a href="projects.html" class="hover:text-white">Projects</a></li>
+    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+  </ul>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Me</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glow card */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+/* Hover glow */
+.glass:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(139,92,246,0.3);
+  transition: 0.3s;
+}
+
+/* Input styling */
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  outline: none;
+  color: white;
+}
+
+.input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 10px #8b5cf6;
+}
+</style>
+</head>
+
+<body class="text-white">
+
+<section class="min-h-screen flex items-center justify-center px-6 py-16">
+
+  <div class="max-w-6xl w-full">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
+        Contact Me
+      </h1>
+      <p class="text-gray-400 mt-4">Let's build something amazing together</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Contact Form -->
+      <div class="glass p-8">
+        <h2 class="text-2xl font-semibold mb-6">📩 Send a Message</h2>
+
+        <form onsubmit="sendMessage(event)" class="space-y-4">
+          <input type="text" placeholder="Your Name" class="input" required>
+          <input type="email" placeholder="Your Email" class="input" required>
+          <input type="text" placeholder="Subject" class="input">
+          <textarea placeholder="Your Message" rows="5" class="input" required></textarea>
+
+          <button type="submit"
+            class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 hover:scale-105 transition">
+            Send Message 🚀
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-6">
+
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold">📍 Location</h3>
+          <p class="text-gray-400">Kathmandu, Nepal</p>
+        </div>
+
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold">📧 Email</h3>
+          <p class="text-gray-400">sushantchaudhary021@gmail.com</p>
+        </div>
+
+        <div class="glass p-6">
+  <h3 class="text-xl font-semibold">🌐 Social</h3>
+  <p class="text-gray-400">
+    <a href="https://555hant.github.io/gaming/" target="_blank">GitHub</a> /
+    <a href="https://instagram.com/vyroka.imperial/" target="_blank">Instagram</a> /
+    <a href="https://www.linkedin.com/in/sushant-chaudhary-a1a4b3404/" target="_blank">LinkedIn</a>
+  </p>
+</div>
+
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold">⚡ Availability</h3>
+          <p class="text-gray-400">Open for projects & collaborations</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+function sendMessage(e) {
+  e.preventDefault();
+  alert("Message sent! (Frontend demo only)");
+}
+</script>
+
+</body>
+</html>

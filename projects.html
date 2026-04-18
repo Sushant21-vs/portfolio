@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - Sushant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a:hover {
+      color: #0077ff;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    /* GRID */
+    .projects {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #0077ff;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: white;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Sushant</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>My Projects</h1>
+  <p>Here are some of my works</p>
+</div>
+
+<!-- PROJECTS -->
+<div class="projects">
+
+  <!-- PROJECT 1 -->
+  <div class="card">
+    <img src="https://555hant.github.io/gaming/400x200" alt="">
+    <h3>Gaming Website</h3>
+    <p>Interactive gaming UI and design.</p>
+    <a href="https://555hant.github.io/gaming/" target="_blank">View Project →</a>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="card">
+    <img src="https://guns.lol/speedyhero400x200" alt="">
+    <h3>Short webpage</h3>
+    <p>Clean personal portfolio design.</p>
+    <a href="#">LOL →</a>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="card">
+    <img src="https://instagram.com/vyroka.imperial/" alt="">
+    <h3>E-commerce</h3>
+    <p>Streetwear made for everyday confidence.</p>
+    <a href="#">View Project →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Sushant Chaudhary</p>
+</footer>
+
+</body>
+</html>

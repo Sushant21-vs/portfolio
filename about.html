@@ -1,0 +1,162 @@
+<nav class="flex justify-between items-center p-6 bg-black/30 backdrop-blur-md">
+  <h1 class="text-xl font-bold text-purple-400">Sushant</h1>
+
+  <ul class="flex gap-6 text-gray-300">
+    <li><a href="index.html" class="hover:text-white">Home</a></li>
+    <li><a href="about.html" class="hover:text-white">About</a></li>
+    <li><a href="projects.html" class="hover:text-white">Projects</a></li>
+    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+  </ul>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Me - Advanced</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated background */
+.bg-anim {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(139,92,246,0.15), transparent 40%);
+  animation: moveBg 12s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-25%, -25%); }
+  100% { transform: translate(0,0); }
+}
+
+/* Glow border */
+.glow-box {
+  position: relative;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(120deg, #8b5cf6, #06b6d4);
+}
+
+.glow-box div {
+  background: rgba(15,23,42,0.9);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+/* Hover effect */
+.glow-box:hover {
+  transform: translateY(-8px) scale(1.02);
+  transition: 0.4s;
+  box-shadow: 0 0 25px rgba(139,92,246,0.4);
+}
+
+/* Typing cursor */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: #06b6d4;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+</style>
+</head>
+
+<body class="text-white">
+
+<div class="bg-anim"></div>
+
+<section class="min-h-screen flex flex-col items-center justify-center px-6">
+
+  <!-- HERO -->
+  <div class="text-center mb-16">
+    <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
+      About Me
+    </h1>
+
+    <p class="mt-6 text-xl text-gray-300">
+      <span id="typing"></span><span class="cursor"></span>
+    </p>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid md:grid-cols-2 gap-8 max-w-6xl w-full">
+
+    <!-- WHO I AM -->
+    <div class="glow-box">
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">👋 Who I Am</h2>
+        <p class="text-gray-300">
+          I'm <span class="text-purple-400 font-semibold">Sushant</span>, a developer from Kathmandu who loves building futuristic websites, games, and digital systems.
+        </p>
+      </div>
+    </div>
+
+    <!-- JOURNEY -->
+    <div class="glow-box">
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">🚀 Journey</h2>
+        <p class="text-gray-300">
+          Started with curiosity → turned into passion → now building real-world projects and leveling up every day.
+        </p>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="glow-box md:col-span-2">
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">💻 Skills</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-purple-600/20 rounded-full">HTML</span>
+          <span class="px-4 py-2 bg-purple-600/20 rounded-full">CSS</span>
+          <span class="px-4 py-2 bg-purple-600/20 rounded-full">JavaScript</span>
+          <span class="px-4 py-2 bg-purple-600/20 rounded-full">React</span>
+          <span class="px-4 py-2 bg-purple-600/20 rounded-full">Tailwind</span>
+          <span class="px-4 py-2 bg-purple-600/20 rounded-full">Game Dev</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VISION -->
+    <div class="glow-box md:col-span-2">
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">🎯 Vision</h2>
+        <p class="text-gray-300">
+          My mission is to become a full-stack developer and build powerful platforms, games, and experiences that stand out globally.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+<script>
+const text = "Developer • Creator • Future Innovator";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 60);
+  }
+}
+
+typing();
+</script>
+
+</body>
+</html>
